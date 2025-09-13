@@ -34,7 +34,7 @@ def lambda_handler(event, context):
     }
 
     try:
-        table.put_item(Item=item)  # ✅ Now this works correctly
+        table.put_item(Item=item)  
     except Exception as e:
         print("DynamoDB Error:", str(e))
         return {
@@ -49,3 +49,4 @@ def lambda_handler(event, context):
             'task_id': task_id
         })
     }
+
